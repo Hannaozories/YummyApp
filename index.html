@@ -1,0 +1,206 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <title>Yummy</title>
+</head>
+
+<body>
+
+    <div class="loading">
+        <span class="loader"></span>
+
+    </div>
+    <!-- Start Side Bar -->
+    <div class="row">
+        <div class="col-md-2 col-sm-6 col-xs-6">
+            <div class="sideBar" id="sideBar">
+                <div class="black">
+                    <ul class="list-unstyled">
+                        <li class="search">Search</li>
+                        <li class="categories">Categories</li>
+                        <li class="Area">Area</li>
+                        <li class="ingredients">Ingredients</li>
+                        <li class="contact">Contact Us</li>
+                    </ul>
+                    <div class="icons ">
+                        <i class="fa-brands fa-facebook-f "></i>
+                        <i class="fa-brands fa-twitter "></i>
+                        <i class="fa-solid fa-globe "></i>
+                        <p class="text-muted">Copyright Â© 2019 All Rights Reserved. </p>
+
+                    </div>
+                </div>
+
+                <div class="white">
+                    <div class="image">
+                        <img src="images/logo.png " alt="" srcset="">
+                    </div>
+                    <div class="icon">
+                        <i class="fa-solid fa-bars icon3" id="open"></i>
+                        <i class="fa-solid fa-close icon3" id="close"></i>
+                    </div>
+                    <div class="icons2 row">
+                        <i class="fa-solid fa-globe mb-2 "></i>
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Side Bar -->
+
+    <!-- Start Main Content -->
+    <div class="container">
+        <div id="my-Row" class="row w-75  m-auto g-4 mt-5 pt-5">
+
+        </div>
+    </div>
+    <!-- End Main Content -->
+    <!-- Start Area Content -->
+    <div class="container">
+        <div id="area-row" class="row w-100 gx-2 gy-3 mt-5 pt-5">
+
+        </div>
+    </div>
+
+    <!-- End Area Content -->
+    <!-- Start Area Filter -->
+    <div class="container">
+        <div id="areaFilter" class="row w-100 g-4 mt-5 pt-5">
+
+        </div>
+    </div>
+    <!-- End Area Filter -->
+    <!-- Start Categories Content -->
+    <div class="container">
+        <div id="category-row" class="row w-100 g-4 mt-5 pt-5">
+
+        </div>
+    </div>
+
+    <!-- End Categories Content -->
+    <div class="container">
+        <div id="row-ingredients" class="row w-100 mb-5 g-4 mt-5 pt-5">
+
+
+        </div>
+    </div>
+
+    <!-- Start Search -->
+    <div class="container">
+        <div id="search" class="row mt-5 pt-5">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input type="search" id="searchByName" class="form-control" placeholder="Search By Name" name=""
+                        id="">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input type="search" id="searchByLetter" maxlength="1" class="form-control"
+                        placeholder="Search By FirstLetter..." name="" id="">
+                </div>
+            </div>
+
+        </div>
+        <div id="rowSearchByName" class="row mt-5 pt-5 g-4 w-100 align-items-center">
+        </div>
+        <div id="rowSearchByLetter" class="row mt-5 pt-5 g-4 w-100 align-items-center">
+
+        </div>
+    </div>
+    <!-- End Search -->
+    <!-- Start Contact Us-->
+
+    <section class="contact-us">
+
+        <h3 class="text-white text-center mt-5">Contact Us...</h3>
+
+        <form action="" class="form ">
+
+            <div class="row w-50 m-auto justify-content-center">
+
+                <div class="col-md-6">
+                    <div class="form-group">
+
+                        <input type="text" id="name" class="shadow-lg input inputs form-control "
+                            placeholder="Enter Your Name">
+                        <div class="alert alert-danger d-none " id="alertName">
+                            <p>Special Characters and Numbers not allowed</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="email" id="email" class="shadow-lg inputs input form-control "
+                            placeholder="Enter Email">
+                        <div class="alert alert-danger d-none" id="alertEmail">
+                            <p>Enter valid email. *Ex: xxx@yyy.zzz</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" id="phone" class="shadow-lg inputs form-control input"
+                            placeholder="Enter Phone">
+                        <div class="alert alert-danger d-none " id="alertPhone">
+                            <p>Enter valid Phone number</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" id="age" class="shadow-lg inputs input form-control "
+                            placeholder="Enter Age">
+                        <div class="alert alert-danger d-none" id="alertAge">
+                            <p>Enter valid Age</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="password" id="password" class="shadow-lg inputs input form-control"
+                            placeholder="Enter Password">
+                        <div class="alert alert-danger d-none" id="alertPassword">
+                            <p>Enter valid password *Minimum 8 characters, at least one Uppercase charcter And One small
+                                character</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="password" id="repassword" class="shadow-lg inputs input form-control"
+                            placeholder="Enter RePassword">
+                        <div class="alert alert-danger d-none" id="alertRepassword">
+                            <p>Password Dose not Match</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="form-btn" class="btn btn-outline-danger mt-3 w-25 disabled">Submit</button>
+
+            </div>
+
+
+        </form>
+
+    </section>
+    <!-- End Contact Us -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
