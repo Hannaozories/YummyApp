@@ -13,189 +13,95 @@
 
 <body>
 
-    <div class="loading">
-        <span class="loader"></span>
 
+    <div class="loading-screen position-fixed top-0 bottom-0 start-0 end-0 bg-dark">
+        <li class="fa-solid fa-spinner fa-spin fa-4x"></li>
     </div>
-    <!-- Start Side Bar -->
-    <div class="row">
-        <div class="col-md-2 col-sm-6 col-xs-6">
-            <div class="sideBar" id="sideBar">
-                <div class="black">
-                    <ul class="list-unstyled">
-                        <li class="search">Search</li>
-                        <li class="categories">Categories</li>
-                        <li class="Area">Area</li>
-                        <li class="ingredients">Ingredients</li>
-                        <li class="contact">Contact Us</li>
-                    </ul>
-                    <div class="icons ">
-                        <i class="fa-brands fa-facebook-f "></i>
-                        <i class="fa-brands fa-twitter "></i>
-                        <i class="fa-solid fa-globe "></i>
-                        <p class="text-muted">Copyright Â© 2019 All Rights Reserved. </p>
 
-                    </div>
+    <div class="side-Bar min-vh-100 d-flex position-fixed top-0 bottom-0 h-100">
+        <div class="left-side d-flex flex-column justify-content-between min-vh-100 p-4">
+            <div class="nav-links">
+                <ul class="list-unstyled overflow-hidden">
+                    <li onclick="searchData();closeMenu() " class="py-2 list position-relative">Search</li>
+                    <li onclick="getCategories();closeMenu() " class="py-2 list position-relative">Categories</li>
+                    <li onclick="getArea();closeMenu() " class="py-2 list position-relative">Area</li>
+                    <li onclick="getIngredients();closeMenu() " class="py-2 list position-relative">Ingredients</lioncl>
+                    <li class="py-2 list position-relative">Contact Us</li>
+                </ul>
+            </div>
+            <div class="nav-footer">
+                <div class="icons">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-solid fa-globe"></i>
                 </div>
-
-                <div class="white">
-                    <div class="image">
-                        <img src="images/logo.png " alt="" srcset="">
-                    </div>
-                    <div class="icon">
-                        <i class="fa-solid fa-bars icon3" id="open"></i>
-                        <i class="fa-solid fa-close icon3" id="close"></i>
-                    </div>
-                    <div class="icons2 row">
-                        <i class="fa-solid fa-globe mb-2 "></i>
-                        <i class="fa-solid fa-share-nodes"></i>
-                    </div>
+                <div class="footer">
+                    <p>Copyright Â© 2019 All Rights<br /> Reserved.</p>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Side Bar -->
+        <div
+            class="right-side d-flex flex-column justify-content-between py-4 text-center px-2 position-relative bg-white ">
+            <img src="images/logo.png" class="logo" alt="">
+            <div>
+                <i class="fa-solid fa-align-justify open-close text-dark fa-2x"></i>
+            </div>
 
-    <!-- Start Main Content -->
-    <div class="container">
-        <div id="my-Row" class="row w-75  m-auto g-4 mt-5 pt-5">
 
-        </div>
-    </div>
-    <!-- End Main Content -->
-    <!-- Start Area Content -->
-    <div class="container">
-        <div id="area-row" class="row w-100 gx-2 gy-3 mt-5 pt-5">
-
-        </div>
-    </div>
-
-    <!-- End Area Content -->
-    <!-- Start Area Filter -->
-    <div class="container">
-        <div id="areaFilter" class="row w-100 g-4 mt-5 pt-5">
-
-        </div>
-    </div>
-    <!-- End Area Filter -->
-    <!-- Start Categories Content -->
-    <div class="container">
-        <div id="category-row" class="row w-100 g-4 mt-5 pt-5">
-
+            <div>
+                <i class="fa-solid fa-globe d-block py-2 position-relative text-dark"></i>
+                <i class="fa-solid fa-share-nodes text-dark"></i>
+            </div>
         </div>
     </div>
 
-    <!-- End Categories Content -->
-    <div class="container">
-        <div id="row-ingredients" class="row w-100 mb-5 g-4 mt-5 pt-5">
-
+    <div class="min-vh-100 position-relative">
+        <div class="inner-loading-screen top-0 start-0 end-0 bottom-0 justify-content-center align-items-center">
+            <i class="fa-solid fa-spinner fa-spin fa-4x"></i>
+        </div>
+        <div class="container w-75" id="SearchRow">
 
         </div>
+
+        <div class="container">
+            <div class="row py-5 g-3" id="myRow">
+
+            </div>
+        </div>
+
     </div>
 
-    <!-- Start Search -->
-    <div class="container">
-        <div id="search" class="row mt-5 pt-5">
+
+
+
+
+
+    <!-- <div class="contact min-vh-100 d-flex align-items-center justify-content-center">
+    <div class="container w-50 text-center">
+        <div class="row g-3">
             <div class="col-md-6">
-                <div class="form-group">
-                    <input type="search" id="searchByName" class="form-control" placeholder="Search By Name" name=""
-                        id="">
-                </div>
+                <input type="text" class="form-control bg-transparent text-white" placeholder="Enter Your Name" name="" id="">
             </div>
             <div class="col-md-6">
-                <div class="form-group">
-                    <input type="search" id="searchByLetter" maxlength="1" class="form-control"
-                        placeholder="Search By FirstLetter..." name="" id="">
-                </div>
+                <input type="email" class="form-control bg-transparent text-white" placeholder="Enter Your Email" name="" id="">
             </div>
-
+            <div class="col-md-6">
+                <input type="text" class="form-control bg-transparent text-white" placeholder="Enter Your Phone" name="" id="">
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control bg-transparent text-white" placeholder="Enter Your Age" name="" id="">
+            </div>
+            <div class="col-md-6">
+                <input type="password" class="form-control bg-transparent text-white" placeholder="Enter Your Password" name="" id="">
+            </div>
+            <div class="col-md-6">
+                <input type="password" class="form-control bg-transparent text-white" placeholder="Enter Repassword" name="" id="">
+            </div>
         </div>
-        <div id="rowSearchByName" class="row mt-5 pt-5 g-4 w-100 align-items-center">
-        </div>
-        <div id="rowSearchByLetter" class="row mt-5 pt-5 g-4 w-100 align-items-center">
-
-        </div>
+        <button class="btn btn-outline-danger my-3">Submit</button>
     </div>
-    <!-- End Search -->
-    <!-- Start Contact Us-->
+</div> -->
 
-    <section class="contact-us">
-
-        <h3 class="text-white text-center mt-5">Contact Us...</h3>
-
-        <form action="" class="form ">
-
-            <div class="row w-50 m-auto justify-content-center">
-
-                <div class="col-md-6">
-                    <div class="form-group">
-
-                        <input type="text" id="name" class="shadow-lg input inputs form-control "
-                            placeholder="Enter Your Name">
-                        <div class="alert alert-danger d-none " id="alertName">
-                            <p>Special Characters and Numbers not allowed</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="email" id="email" class="shadow-lg inputs input form-control "
-                            placeholder="Enter Email">
-                        <div class="alert alert-danger d-none" id="alertEmail">
-                            <p>Enter valid email. *Ex: xxx@yyy.zzz</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="text" id="phone" class="shadow-lg inputs form-control input"
-                            placeholder="Enter Phone">
-                        <div class="alert alert-danger d-none " id="alertPhone">
-                            <p>Enter valid Phone number</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="text" id="age" class="shadow-lg inputs input form-control "
-                            placeholder="Enter Age">
-                        <div class="alert alert-danger d-none" id="alertAge">
-                            <p>Enter valid Age</p>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="password" id="password" class="shadow-lg inputs input form-control"
-                            placeholder="Enter Password">
-                        <div class="alert alert-danger d-none" id="alertPassword">
-                            <p>Enter valid password *Minimum 8 characters, at least one Uppercase charcter And One small
-                                character</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="password" id="repassword" class="shadow-lg inputs input form-control"
-                            placeholder="Enter RePassword">
-                        <div class="alert alert-danger d-none" id="alertRepassword">
-                            <p>Password Dose not Match</p>
-                        </div>
-                    </div>
-                </div>
-
-                <button id="form-btn" class="btn btn-outline-danger mt-3 w-25 disabled">Submit</button>
-
-            </div>
-
-
-        </form>
-
-    </section>
-    <!-- End Contact Us -->
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery-3.6.1.min.js"></script>
